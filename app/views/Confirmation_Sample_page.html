@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Welcome",
+        html: "To The Trading Lounge!"
+      }) }}
+
+      <p>
+        This Is Where You Can Trade Your Games for Other Peoples.
+      </p>
+
+      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+      {{ govukTextarea({
+        name: "more-detail",
+        id: "more-detail",
+        rows: "1",
+        label: {
+          text: "Trade Away.",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          text: "Chose a game in your games librabry."
+        }
+      }) }}
+
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{{ govukTextarea({
+  name: "more-detail",
+  id: "more-detail",
+  rows: "1",
+  label: {
+    text: "Trade For.",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+  }
+}) }}
+      <p>
+        We've sent your application to Hackney Electoral Register Office.
+      </p>
+
+      <p>
+        They will contact you either to confirm your registration, or to ask for more information.
+      </p>
+      <p>
+        <a href="#">
+          What did you think of this service?
+        </a> (takes 30 seconds)
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

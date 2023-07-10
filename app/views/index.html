@@ -13,6 +13,12 @@
       {{ serviceName }}
     </h1>
 
+
+    {{ govukButton({
+      text: "Home Page",
+      href: "PipeLine_HomePage",
+      isStartButton: true
+    }) }}
     {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>

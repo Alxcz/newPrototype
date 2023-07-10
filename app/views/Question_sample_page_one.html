@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Transaction Hub
+      </h1> 
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <p>
+          Set up a MarketPlace and manage your profetional store or Trade for games you want with games you don't need!</a>
+          
+        </p>
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
+        {{ govukButton({
+          text: "Trading lounge",
+          href: "/Confirmation_Sample_Page",
+          isTradingButton: True
+        }) }}
+        {{ govukButton({
+          text: "MarketPlace",
+          href: "nothing here yet",
+          isTradingButton: True
+        }) }}
+
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{{ govukTextarea({
+  name: "WannaMakeAGame",
+  id: "Wanna-make-a-game",
+  label: {
+    text: "Wanna Make A Game?",
+    classes: "govuk-label--l",
+    isPageHeading: true
+  },
+  hint: {
+    text: "Tell us what you would like to make."
+  }
+}) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
